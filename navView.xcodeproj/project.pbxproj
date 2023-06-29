@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD13E0562A4C775500D3A7E0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD13E0552A4C775500D3A7E0 /* ModelData.swift */; };
 		BD145BD62A4617340069BD7F /* fourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD145BD52A4617330069BD7F /* fourthView.swift */; };
 		BD145BD82A461D8C0069BD7F /* fifthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD145BD72A461D8C0069BD7F /* fifthView.swift */; };
 		BD588C562A45F0740076F25B /* navViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD588C552A45F0740076F25B /* navViewApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD13E0552A4C775500D3A7E0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		BD145BD52A4617330069BD7F /* fourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthView.swift; sourceTree = "<group>"; };
 		BD145BD72A461D8C0069BD7F /* fifthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthView.swift; sourceTree = "<group>"; };
 		BD588C522A45F0740076F25B /* navView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = navView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,10 +63,11 @@
 			children = (
 				BD588C552A45F0740076F25B /* navViewApp.swift */,
 				BD588C572A45F0740076F25B /* ContentView.swift */,
-				BD588C632A45F2890076F25B /* secondView.swift */,
 				BD588C652A46121A0076F25B /* thirdView.swift */,
+				BD588C632A45F2890076F25B /* secondView.swift */,
 				BD145BD52A4617330069BD7F /* fourthView.swift */,
 				BD145BD72A461D8C0069BD7F /* fifthView.swift */,
+				BD13E0552A4C775500D3A7E0 /* ModelData.swift */,
 				BD588C592A45F0760076F25B /* Assets.xcassets */,
 				BD588C5B2A45F0760076F25B /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 				BD588C642A45F2890076F25B /* secondView.swift in Sources */,
 				BD588C562A45F0740076F25B /* navViewApp.swift in Sources */,
 				BD145BD62A4617340069BD7F /* fourthView.swift in Sources */,
+				BD13E0562A4C775500D3A7E0 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

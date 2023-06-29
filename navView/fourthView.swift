@@ -18,7 +18,8 @@ struct fourthView: View {
                 .fontWeight(.heavy)
           
         } .toolbar() {NavigationLink(destination: fifthView()) {
-            Text("Stay and Housing")
+            Text("➮")
+                .font(.largeTitle)
         } }
     }
 }
