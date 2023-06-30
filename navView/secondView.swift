@@ -14,82 +14,54 @@ struct secondView: View {
 
         var body: some View {
             
-            NavigationStack {
-                ScrollView{
-                    VStack {
-                        
-                        Image("plane")
-                            .resizable()
-                            .frame(width:300, height: 300)
-                        
-                        
-                        Text("FLIGHTS")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .multilineTextAlignment(.leading)
-                        
-                        Spacer()
-                        
-                        
-                        
-                        
-                        
-                        Spacer()
-                        
-                        Text("Kyoto, Japan")
-                            .font(.title2)
-                            .fontWeight(.light)
-                            .multilineTextAlignment(.leading)
-                        
-                        VStack{
-                            Link("Book Flight on Kayak",
-                                 destination: URL(string: "https://www.kayak.com.my/flight-routes/Malaysia-MY0/Kyoto-KY9")!)
-                            
-                            Link("Book Flight on Kayak",
-                                 destination: URL(string: "https://www.kayak.com.my/flight-routes/Malaysia-MY0/Kyoto-KY9")!)
-                            Spacer()
-                            Text("Osaka, Japan")
-                                .font(.title2)
-                                .fontWeight(.light)
-                                .multilineTextAlignment(.leading)
-                            Spacer()
-                            
-                            Link("Book Flight on Kayak",
-                                 destination: URL(string: "https://www.kayak.com.my/flight-routes/Malaysia-MY0/Kyoto-KY9")!)
-                            
-                            Link("Book Flight on Kayak",
-                                 destination: URL(string: "https://www.kayak.com.my/flight-routes/Malaysia-MY0/Kyoto-KY9")!)
-                            
-                            
-                            
+            ScrollView(.vertical, showsIndicators: false){
+                                
+                                SearchView(text: .constant(""))
+                                    .shadow(color: Color.gray.opacity(0.2), radius: 8, x:0, y:10)
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 20)
+                                
+                                ForEach(category) { i in
+                                    VStack(spacing: 10){
+                                        HStack {
+                                            Text(i.title)
+                                                .font(.custom("Helvetica Neue", size: i.size))
+                                                .fontWeight(.bold)
+                                            
+                                            Spacer()
+                                        }
+                                        
+                                        LocationView(row: i.gridItem, cardHeight: i.cardHeight)
+                                    }
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 30)
+                                }
+                                
+                                }
+                                .padding(.horizontal,20)
+                                .padding(.top, 30)
+                            }
                         }
-                        
-                        
-                        .padding(.bottom, 300.0) .toolbar()   { NavigationLink(destination: thirdView()) {
-                            Text("➮")
-                                .font(.largeTitle)
-                            
-                        }
-                            
-                            
-                            
-                            
-                        }
-                        .padding(2)
-                        
-                    }
                     
-                    
-                }
-                
-            }
-        }
-        
-    }
 
-        
-struct secondView_Previews: PreviewProvider {
-          static var previews: some View {
-              secondView()
-    }
-}
+                    struct secondView_Previews: PreviewProvider {
+                        static var previews: some View {
+                            secondView()
+                        }
+                    }
+                     
+                    struct Category: Identifiable {
+                        var id = UUID()
+                        var title: String
+                        var size: CGFloat
+                        var gridItem: [GridItem]
+                        var cardHeight: CGFloat
+                    }
+
+                    var category = [
+
+                        Category(title: "popular", size: 30, gridItem: Array(repeating: GridItem(.fixed(230), spacing: 10), count: 1), cardHeight: 210),
+                        Category(title: "Discover", size: 22, gridItem: Array(repeating: GridItem(.fixed(125), spacing: 10), count: 1), cardHeight: 105),
+                    ]
+
+

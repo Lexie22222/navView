@@ -42,7 +42,7 @@ struct ContentView: View {//open
                         HStack {
                             VStack {
                                 
-                                NavigationLink(destination: thirdView()) {
+                                NavigationLink(destination: secondView()) {
                                     Image(systemName: "airplane")
                                         .foregroundColor(.white).padding(.all, 18)
                                         .background(Color.blue.opacity(0.8))
@@ -114,8 +114,6 @@ struct ContentView: View {//open
                         
                         
                             .toolbar() {   NavigationLink(destination: secondView()) {//open
-                                Text("➮")
-                                    .font(.largeTitle)
                                 
                             }
                                 
